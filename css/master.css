@@ -1,0 +1,117 @@
+body {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 10; }
+
+p, h1, h2, h3, h4, h5, h6, a, label, span, .info {
+  color: Black;
+  font-family: 'Quicksand', Arial, sans-serif; }
+
+.logoPart {
+  margin-left: 40px; }
+
+.filterNavigation {
+  margin-right: 40px;
+  margin-top: 7px; }
+  .filterNavigation a {
+    margin-right: 20px;
+    font-size: 25px;
+    color: white;
+    background-color: black;
+    border-radius: 8px;
+    padding: 5px;
+    text-decoration: none; }
+    .filterNavigation a:hover {
+      color: black;
+      background-color: white; }
+
+.headNavigation {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  background-color: cyan;
+  justify-content: space-between; }
+
+.movie-disp {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #5bca5b;
+  margin-left: 320px;
+  padding-left: 40px; }
+
+.movie-item {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  text-decoration: none;
+  width: 250px; }
+  .movie-item img {
+    width: 250px; }
+    .movie-item img:hover {
+      cursor: pointer;
+      -webkit-filter: drop-shadow(10px 7px 10px #000);
+      filter: drop-shadow(10px 7px 10px #000); }
+  .movie-item a {
+    margin-bottom: 15px;
+    text-align: center;
+    color: blue;
+    font-weight: 600;
+    font-size: 20px;
+    text-decoration: none; }
+    .movie-item a:hover {
+      text-decoration: underline;
+      text-decoration-color: black; }
+  .movie-item h2 {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px; }
+
+.movie-disp-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 40px;
+  margin-left: 20px;
+  background-color: #5bca5b; }
+
+.movie-item-details {
+  display: flex;
+  flex-direction: column;
+  background-color: #5dbfec; }
+  .movie-item-details h2 {
+    font-size: 35px; }
+  .movie-item-details img {
+    width: 400px; }
+
+.details-info {
+  display: flex;
+  flex-direction: column;
+  background-color: #f58080; }
+  .details-info h4 {
+    font-size: 20px; }
+  .details-info p {
+    font-size: 16px; }
+
+.details-desc {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  background-color: #f1ef71; }
+  .details-desc h4 {
+    font-size: 20px;
+    margin-bottom: 10px; }
+
+footer {
+  background-color: violet;
+  padding-top: 10px;
+  padding-bottom: 20px; }
+  footer p {
+    font-size: 16px;
+    text-align: right;
+    margin-right: 20px; }
+
+/*# sourceMappingURL=master.css.map */
