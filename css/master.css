@@ -1,46 +1,73 @@
 body {
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  z-index: 10; }
+  display: flex;
+  flex-direction: column; }
+
+html, body {
+  height: 100%; }
 
 p, h1, h2, h3, h4, h5, h6, a, label, span, .info {
   color: Black;
   font-family: 'Quicksand', Arial, sans-serif; }
 
+.container {
+  width: 100%;
+  margin: 0 auto;
+  flex: 1 0 auto;
+  background-color: red; }
+  @media only screen and (min-width: 768px) {
+    .container {
+      width: 50%;
+      margin: 0 auto;
+      flex: 1 0 auto; } }
+
 .logoPart {
-  margin-left: 40px; }
+  margin: 0 auto;
+  margin-top: 10px; }
+  @media only screen and (min-width: 768px) {
+    .logoPart {
+      margin-left: 40px;
+      margin-top: 0; } }
 
 .filterNavigation {
-  margin-right: 40px;
-  margin-top: 7px; }
+  margin: 0 auto; }
+  .filterNavigation nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center; }
+    @media only screen and (min-width: 768px) {
+      .filterNavigation nav {
+        flex-direction: row; } }
   .filterNavigation a {
     margin-right: 20px;
     font-size: 25px;
     color: white;
-    background-color: black;
     border-radius: 8px;
     padding: 5px;
     text-decoration: none; }
     .filterNavigation a:hover {
       color: black;
       background-color: white; }
+  @media only screen and (min-width: 768px) {
+    .filterNavigation {
+      margin-right: 40px;
+      margin-top: 7px; } }
 
 .headNavigation {
-  padding-top: 10px;
   display: flex;
-  flex-direction: row;
-  background-color: cyan;
-  justify-content: space-between; }
+  flex-direction: column;
+  background-color: #9b9b9b; }
+  @media only screen and (min-width: 768px) {
+    .headNavigation {
+      padding-top: 10px;
+      display: flex;
+      flex-direction: row;
+      background-color: #9b9b9b;
+      justify-content: space-between; } }
 
 .movie-disp {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  background-color: #5bca5b;
-  margin-left: 320px;
-  padding-left: 40px; }
+  flex-wrap: wrap; }
 
 .movie-item {
   display: flex;
@@ -74,44 +101,64 @@ p, h1, h2, h3, h4, h5, h6, a, label, span, .info {
   flex-direction: row;
   justify-content: space-between;
   margin-right: 40px;
-  margin-left: 20px;
-  background-color: #5bca5b; }
+  margin-left: 20px; }
 
 .movie-item-details {
   display: flex;
-  flex-direction: column;
-  background-color: #5dbfec; }
+  flex-direction: column; }
   .movie-item-details h2 {
-    font-size: 35px; }
+    font-size: 28px;
+    margin-top: 50px; }
   .movie-item-details img {
-    width: 400px; }
+    width: 400px;
+    margin-top: 15px; }
 
 .details-info {
+  max-width: 300px;
+  min-width: 300px;
+  min-height: 450px;
+  max-height: 450px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  background-color: #f58080; }
+  border: 1px dashed;
+  border-radius: 10px;
+  margin-top: 50px; }
   .details-info h4 {
     font-size: 20px; }
   .details-info p {
-    font-size: 16px; }
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    color: red; }
+  .details-info button {
+    margin-top: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: -40px; }
 
 .details-desc {
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
   margin-left: 20px;
-  margin-bottom: 20px;
-  background-color: #f1ef71; }
+  margin-bottom: 20px; }
   .details-desc h4 {
     font-size: 20px;
     margin-bottom: 10px; }
+  .details-desc p {
+    margin-top: 10px;
+    font-size: 16px; }
 
 footer {
-  background-color: violet;
+  background-color: #9b9b9b;
   padding-top: 10px;
-  padding-bottom: 20px; }
+  padding-bottom: 20px;
+  flex-shrink: 0; }
   footer p {
     font-size: 16px;
     text-align: right;
-    margin-right: 20px; }
+    margin-right: 20px;
+    color: white; }
 
 /*# sourceMappingURL=master.css.map */
