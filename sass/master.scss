@@ -1,26 +1,58 @@
 body {
     // background-color: grey;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    z-index: 10;
+    // width: 100%;
+    // height: 100%;
+    // left: 0;
+    // top: 0;
+    // z-index: 10;
+    display: flex;
+  flex-direction: column;
 }
+
+html, body {
+    height: 100%;
+  }
 
 p, h1, h2, h3, h4, h5, h6, a, label, span, .info {
     color: Black;
     font-family: 'Quicksand', Arial, sans-serif; //fontu eklemeyi unutma
 }
 
+.container {
+    @media only screen and (min-width: 768px){
+        width: 50%;
+        margin: 0 auto;
+        flex: 1 0 auto;
+    }
+    width: 100%;
+    margin: 0 auto;
+    flex: 1 0 auto;
+    background-color: red;
+}
+
 // Header Starts---------------------------------------
 
 .logoPart {
-    margin-left: 40px;
+    @media only screen and (min-width: 768px){
+        margin-left: 40px;
+        margin-top: 0;
+    }
+    margin: 0 auto;
+    margin-top: 10px;
+    // width: 50%;
+    // margin: 0 auto;
 }
 
 .filterNavigation {
-    margin-right: 40px;
-    margin-top: 7px;
+    margin: 0 auto;
+    nav {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        @media only screen and (min-width: 768px){
+            flex-direction: row;
+        }
+    }
     a {
         margin-right: 20px;
         font-size: 25px;
@@ -29,19 +61,28 @@ p, h1, h2, h3, h4, h5, h6, a, label, span, .info {
             background-color: white;
         }
         color: white;
-        background-color: rgb(0, 0, 0);
+        // background-color: rgb(0, 0, 0);
         border-radius: 8px;
         padding: 5px;
         text-decoration: none;
     }
+    @media only screen and (min-width: 768px){
+        margin-right: 40px;
+        margin-top: 7px;
+    }
 }
 
 .headNavigation {
-    padding-top: 10px;
+    @media only screen and (min-width: 768px){
+        padding-top: 10px;
+        display: flex;
+        flex-direction: row;
+        background-color: rgb(155, 155, 155);
+        justify-content: space-between;
+    }
     display: flex;
-    flex-direction: row;
-    background-color: cyan;
-    justify-content: space-between;
+    flex-direction: column;
+    background-color: rgb(155, 155, 155);
 }
 
 
@@ -51,10 +92,10 @@ p, h1, h2, h3, h4, h5, h6, a, label, span, .info {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    background-color: rgb(91, 202, 91);
+    // background-color: rgb(91, 202, 91);
     // justify-content: space-around;
-    margin-left: 320px; // FILTRELEME YERLESTIRDIKTEN SONRA SIL -------  
-    padding-left: 40px; // FILTRELEME YERLESTIRDIKTEN SONRA SIL -------  
+    // margin-left: 320px; // FILTRELEME YERLESTIRDIKTEN SONRA SIL -------  
+    // padding-left: 40px; // FILTRELEME YERLESTIRDIKTEN SONRA SIL -------  
 }
 
 .movie-item {
@@ -101,34 +142,54 @@ p, h1, h2, h3, h4, h5, h6, a, label, span, .info {
     justify-content: space-between;
     margin-right: 40px;
     margin-left: 20px;
-    background-color: rgb(91, 202, 91);
+    // background-color: rgb(91, 202, 91);
 }
 
 .movie-item-details {
     display: flex;
     flex-direction: column;
-    background-color: rgb(93, 191, 236);
+    // background-color: rgb(93, 191, 236);
     h2 {
-        font-size: 35px;
+        font-size: 28px;
+        margin-top: 50px;
     }
     img {
         width: 400px;
+        margin-top: 15px;
     }
 }
 
 .details-info {
+    max-width: 300px;
+    min-width: 300px;
+    min-height: 450px;
+    max-height: 450px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    background-color: rgb(245, 128, 128);
+    // background-color: rgb(245, 128, 128);
+    border: 1px dashed;
+    border-radius: 10px;
+    margin-top: 50px;
     h4 {
         font-size: 20px;
     }
     p {
-        font-size: 16px;
+        font-size: 30px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        color: red;
+    }
+    button {
+        margin-top: 50px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-bottom: -40px;
     }
 }
 
 .details-desc {
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
     margin-left: 20px;
@@ -136,8 +197,12 @@ p, h1, h2, h3, h4, h5, h6, a, label, span, .info {
         font-size: 20px;
         margin-bottom: 10px;
     }
+    p {
+        margin-top: 10px;
+        font-size: 16px;
+    }
     margin-bottom: 20px;
-    background-color: rgb(241, 239, 113);
+    // background-color: rgb(241, 239, 113);
 }
 
 // DETAILS ENDS --------------------------
@@ -145,13 +210,15 @@ p, h1, h2, h3, h4, h5, h6, a, label, span, .info {
 // FOOTER ---------------------------
 
 footer {
-    background-color: violet;
+    background-color: rgb(155, 155, 155);
     padding-top: 10px;
     padding-bottom: 20px;
+    flex-shrink: 0;
     p {
         font-size: 16px;
         text-align: right;
         margin-right: 20px;
-        
+        color: white;
     }
+    
 }
