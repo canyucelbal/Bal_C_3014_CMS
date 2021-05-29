@@ -25,13 +25,13 @@ else{
     </head>
     <body>
         <?php include 'template/header.php'; ?> 
-        <div class='container'>
-            <section class="movie-disp">
+        <div class='col-6 container'>
+            <section class="col-12 movie-disp">
                 <?php foreach ($getMovies as $movie):?>
-                <div class='movie-item'>
-                <a href="details.php?id=<?php echo $movie['product_id']; ?>">
-                    <img src="images/<?php echo $movie['product_img']; ?>" alt="<?php echo $movie['product_name']; ?> cover image">
-                    <h2><?php echo $movie['product_name']; ?></h2>
+                <div class='col-3 col-s-6 movie-item'>
+                <a class='col-11 col-s-11' href="details.php?id=<?php echo $movie['product_id']; ?>">
+                    <img class='col-12' src="images/<?php echo $movie['product_img']; ?>" alt="<?php echo $movie['product_name']; ?> cover image">
+                    <h2 class='col-11'><?php echo $movie['product_name']; ?></h2>
                     </a>
                 </div>
                 <?php endforeach;?>

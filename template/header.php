@@ -6,9 +6,13 @@
     </section>
     <section class="filterNavigation">
         <nav>
+            <hr>
             <a href="index.php?filter=Man">Men</a>
+            <hr>
             <a href="index.php?filter=women">Women</a>
+            <hr>
             <a href="index.php?filter=kids">Kids</a>
+            <hr>
             <a href="index.php">All</a>
         </nav>
     </section>
