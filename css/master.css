@@ -1,3 +1,87 @@
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%; }
+
+[class*="col-"] {
+  float: left; }
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {
+    width: 8.33%; }
+
+  .col-s-2 {
+    width: 16.66%; }
+
+  .col-s-3 {
+    width: 25%; }
+
+  .col-s-4 {
+    width: 33.33%; }
+
+  .col-s-5 {
+    width: 41.66%; }
+
+  .col-s-6 {
+    width: 50%; }
+
+  .col-s-7 {
+    width: 58.33%; }
+
+  .col-s-8 {
+    width: 66.66%; }
+
+  .col-s-9 {
+    width: 75%; }
+
+  .col-s-10 {
+    width: 83.33%; }
+
+  .col-s-11 {
+    width: 91.66%; }
+
+  .col-s-12 {
+    width: 100%; } }
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-0 {
+    width: 4.17%; }
+
+  .col-1 {
+    width: 8.33%; }
+
+  .col-2 {
+    width: 16.66%; }
+
+  .col-3 {
+    width: 25%; }
+
+  .col-4 {
+    width: 33.33%; }
+
+  .col-5 {
+    width: 41.66%; }
+
+  .col-6 {
+    width: 50%; }
+
+  .col-7 {
+    width: 58.33%; }
+
+  .col-8 {
+    width: 66.66%; }
+
+  .col-9 {
+    width: 75%; }
+
+  .col-10 {
+    width: 83.33%; }
+
+  .col-11 {
+    width: 91.66%; }
+
+  .col-12 {
+    width: 100%; } }
 body {
   display: flex;
   flex-direction: column; }
@@ -10,13 +94,10 @@ p, h1, h2, h3, h4, h5, h6, a, label, span, .info {
   font-family: 'Quicksand', Arial, sans-serif; }
 
 .container {
-  width: 100%;
   margin: 0 auto;
-  flex: 1 0 auto;
-  background-color: red; }
+  flex: 1 0 auto; }
   @media only screen and (min-width: 768px) {
     .container {
-      width: 50%;
       margin: 0 auto;
       flex: 1 0 auto; } }
 
@@ -28,29 +109,37 @@ p, h1, h2, h3, h4, h5, h6, a, label, span, .info {
       margin-left: 40px;
       margin-top: 0; } }
 
-.filterNavigation {
-  margin: 0 auto; }
-  .filterNavigation nav {
-    display: flex;
-    flex-direction: column;
-    text-align: center; }
-    @media only screen and (min-width: 768px) {
-      .filterNavigation nav {
-        flex-direction: row; } }
-  .filterNavigation a {
-    margin-right: 20px;
-    font-size: 25px;
-    color: white;
-    border-radius: 8px;
-    padding: 5px;
-    text-decoration: none; }
-    .filterNavigation a:hover {
-      color: black;
-      background-color: white; }
+.filterNavigation hr {
+  border-top: 1px solid; }
+.filterNavigation nav {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 12px; }
   @media only screen and (min-width: 768px) {
-    .filterNavigation {
-      margin-right: 40px;
-      margin-top: 7px; } }
+    .filterNavigation nav {
+      flex-direction: row;
+      text-align: center;
+      margin-bottom: 0px; } }
+.filterNavigation a {
+  color: white;
+  text-decoration: none;
+  font-size: 25px; }
+  @media only screen and (min-width: 768px) {
+    .filterNavigation a {
+      margin-right: 20px;
+      font-size: 25px;
+      color: white;
+      border-radius: 8px;
+      padding: 5px;
+      text-decoration: none; }
+      .filterNavigation a:hover {
+        color: black;
+        background-color: white; } }
+@media only screen and (min-width: 768px) {
+  .filterNavigation {
+    margin-right: 40px;
+    margin-top: 7px; } }
 
 .headNavigation {
   display: flex;
@@ -58,6 +147,7 @@ p, h1, h2, h3, h4, h5, h6, a, label, span, .info {
   background-color: #9b9b9b; }
   @media only screen and (min-width: 768px) {
     .headNavigation {
+      margin-bottom: 20px;
       padding-top: 10px;
       display: flex;
       flex-direction: row;
@@ -70,60 +160,73 @@ p, h1, h2, h3, h4, h5, h6, a, label, span, .info {
   flex-wrap: wrap; }
 
 .movie-item {
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
-  margin-left: 20px;
-  text-decoration: none;
-  width: 250px; }
+  text-decoration: none; }
   .movie-item img {
-    width: 250px; }
+    margin-bottom: 10px; }
     .movie-item img:hover {
       cursor: pointer;
       -webkit-filter: drop-shadow(10px 7px 10px #000);
       filter: drop-shadow(10px 7px 10px #000); }
   .movie-item a {
     margin-bottom: 15px;
-    text-align: center;
+    margin: 0 auto;
     color: blue;
     font-weight: 600;
-    font-size: 20px;
     text-decoration: none; }
     .movie-item a:hover {
       text-decoration: underline;
       text-decoration-color: black; }
   .movie-item h2 {
-    font-size: 20px;
-    margin-top: 10px;
-    margin-bottom: 10px; }
+    text-align: center; }
+    @media only screen and (min-width: 1100px) {
+      .movie-item h2 {
+        font-size: 1vw; } }
+    @media only screen and (max-width: 1099px) {
+      .movie-item h2 {
+        font-size: 2vw; } }
+    @media only screen and (max-width: 767px) {
+      .movie-item h2 {
+        font-size: 4vw; } }
+    @media only screen and (max-width: 599px) {
+      .movie-item h2 {
+        font-size: 6vw; } }
 
-.movie-disp-details {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-right: 40px;
-  margin-left: 20px; }
+@media only screen and (min-width: 768px) {
+  .movie-disp-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; } }
 
-.movie-item-details {
-  display: flex;
-  flex-direction: column; }
-  .movie-item-details h2 {
-    font-size: 28px;
-    margin-top: 50px; }
-  .movie-item-details img {
-    width: 400px;
-    margin-top: 15px; }
+.movie-item-details h2 {
+  font-size: 28px;
+  margin-top: 10px;
+  text-align: center; }
+  @media only screen and (min-width: 768px) {
+    .movie-item-details h2 {
+      text-align: left;
+      margin-top: 0; } }
+.movie-item-details img {
+  margin-top: 15px; }
 
 .details-info {
-  max-width: 300px;
-  min-width: 300px;
-  min-height: 450px;
-  max-height: 450px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  border: 1px dashed;
-  border-radius: 10px;
-  margin-top: 50px; }
+  text-align: center;
+  min-height: 20vh; }
+  @media only screen and (min-width: 768px) {
+    .details-info {
+      min-height: 33vh;
+      padding: 20px;
+      border: 1px dashed;
+      border-radius: 10px;
+      text-align: left; } }
+  @media only screen and (min-width: 600px) {
+    .details-info {
+      border: 1px dashed;
+      border-radius: 10px;
+      padding-bottom: 10px;
+      padding-top: 10px; } }
   .details-info h4 {
     font-size: 20px; }
   .details-info p {
@@ -132,16 +235,18 @@ p, h1, h2, h3, h4, h5, h6, a, label, span, .info {
     margin-bottom: 15px;
     color: red; }
   .details-info button {
-    margin-top: 50px;
+    margin-top: 10px;
     padding-top: 20px;
     padding-bottom: 20px;
-    margin-bottom: -40px; }
+    border-radius: 10px;
+    color: white;
+    background-color: black; }
+    @media only screen and (min-width: 768px) {
+      .details-info button {
+        margin-top: 50px; } }
 
 .details-desc {
   margin-top: 30px;
-  display: flex;
-  flex-direction: column;
-  margin-left: 20px;
   margin-bottom: 20px; }
   .details-desc h4 {
     font-size: 20px;

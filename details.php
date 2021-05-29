@@ -24,27 +24,27 @@ if(isset($_GET['id'])){
 </head>
 <body>
     <?php include './template/header.php'; ?>  
-    <div class='container'>
+    <div class='col-6 col-s-11 container'>
         <?php if(!empty($movie)):?>
-        <section class='movie-disp-details'>
-            <div class='movie-item-details'>
+        <section class='col-12 col-s-12 movie-disp-details'>
+            <div class='col-6 col-s-12 movie-item-details'>
                 <h2><?php echo $movie['product_name']; ?></h2>
-                <img src="images/<?php echo $movie['product_img']; ?>" alt="<?php echo $movie['product_name']; ?> Cover image" class="detailsImage">
+                <img class='col-12 col-s-12' src="images/<?php echo $movie['product_img']; ?>" alt="<?php echo $movie['product_name']; ?> Cover image" class="detailsImage">
             </div>
-            <div class='details-info'>
+            <div class='col-3 col-s-12 details-info'>
                 <h4>Price: </h4>
                 <p>$<?php echo $movie['product_price']; ?></p>
                 <h4>Colors Available: </h4>
                 <p><?php echo $movie['product_color']; ?></p>
-                <button type="button">Add to Cart!</button>
+                <button class='col-12 col-s-12' type="button">Add to Cart!</button>
             </div>
         </section>
-        <div class='details-desc'>
+        <div class='col-12 col-s-12 details-desc'>
             <h4>Description: </h4>
             <p><?php echo $movie['product_description']; ?></p>
         </div>
         <?php else:?>
-        <p>There isnt such a product</p>
+        <p>There isn't such a product</p>
         <?php endif;?>
     </div>
     <?php include './template/footer.php'; ?>
