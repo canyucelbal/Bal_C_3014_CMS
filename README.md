@@ -39,7 +39,7 @@ You can use every browser, such as:
 </ul>
 
 ## Authors
-@canyucelbal
+1. [@canyucelbal](https://github.com/canyucelbal)
 <ul>
 	<li>Visual Design</li>
 	<li>Images</li>
