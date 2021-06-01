@@ -375,3 +375,21 @@ footer {
          }
     }
 }
+
+td {
+    background-color: rgb(207, 207, 207);
+}
+
+.createSection {
+    h2 {
+        margin-bottom: 15px;
+        font-size: 22px;
+    }
+    margin: 0 auto;
+    // background-color: hotpink;
+    label {
+        margin-left: 20px;
+        margin-right: 5px;
+        width: 100%;
+    }
+}
