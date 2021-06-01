@@ -20,10 +20,10 @@ if(isset($_GET['id'])){
     <link rel="stylesheet" href="css/reset.css">
     <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
     <link rel="stylesheet" href="css/master.css">
-    <title>Welcome to details page</title>
+    <title>Sportchek CRUD CMS - Details</title>
 </head>
 <body>
-    <?php include './template/header.php'; ?>  
+    <?php include './template/header_details.php'; ?>  
     <div class='col-6 col-s-11 container'>
         <?php if(!empty($movie)):?>
         <section class='col-12 col-s-12 movie-disp-details'>
