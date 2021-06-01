@@ -8,6 +8,15 @@ if(isset($_GET['filter'])) {
     $getMovies = getProductsByGender($filter);
 }
 
+elseif(isset($_GET['type'])) {
+    $filter = $_GET['type'];
+    $getMovies = getProductsByType($filter);
+}
+
+elseif(isset($_GET['search'])) {
+    $submit = $_GET['search'];
+    $getMovies = getProductsByType($submit);
+}
 else{
     $getMovies = getAllProducts();
 }
@@ -21,11 +30,31 @@ else{
         <link rel="stylesheet" href="css/reset.css">
         <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
         <link rel="stylesheet" href="css/master.css">
-        <title>Welcome to cms</title>
+        <title>Sportchek CRUD CMS - Home</title>
     </head>
     <body>
         <?php include 'template/header.php'; ?> 
-        <div class='col-6 container'>
+        <div class='col-6 col-s-12 container'>
+        <div class="col-3 col-s-12 dropdown">
+            <button class="col-12 dropbtn">Hover to Filter</button>
+            <div class="col-12 col-s-12 dropdown-content">
+                
+                <ul><a class="col-7 col-s-12" href="index.php?type=hats">Hats</a></ul>
+                
+                <ul><a class="col-7 col-s-12" href="index.php?type=pants">Pants</a></ul>
+                
+                <ul><a class="col-7 col-s-12" href="index.php?type=socks">Socks</a></ul>
+                
+                <ul><a class="col-7 col-s-12" href="index.php?type=swimwear">Swimwear</a></ul>
+                
+                <ul><a class="col-7 col-s-12" href="index.php?type=boots">Boots</a></ul>
+                
+                <ul><a class="col-7 col-s-12" href="index.php?type=tanks">Tanks</a></ul>
+                
+                <ul><a class="col-7 col-s-12" href="index.php?type=hoodies">Hoodies</a></ul>
+                
+            </div>
+        </div>
             <section class="col-12 movie-disp">
                 <?php foreach ($getMovies as $movie):?>
                 <div class='col-3 col-s-6 movie-item'>
