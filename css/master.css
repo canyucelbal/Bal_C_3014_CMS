@@ -362,4 +362,17 @@ footer {
   .options a:hover {
     background-color: grey; }
 
+td {
+  background-color: #cfcfcf; }
+
+.createSection {
+  margin: 0 auto; }
+  .createSection h2 {
+    margin-bottom: 15px;
+    font-size: 22px; }
+  .createSection label {
+    margin-left: 20px;
+    margin-right: 5px;
+    width: 100%; }
+
 /*# sourceMappingURL=master.css.map */
