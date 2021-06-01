@@ -48,3 +48,22 @@ function getProductsByGender($gender){
         return 'No data found';
     }
 }
+
+
+function getProductsByType($sort){
+    $pdo = Database:: getInstance()->getConnection();
+    $query= 'SELECT m.*, GROUP_CONCAT(s.sort_name) as sort_name FROM tbl_products m';
+    $query.= ' LEFT JOIN tbl_pro_sort link ON link.product_id = m.product_id';
+    $query.= ' LEFT JOIN tbl_sort s ON link.sort_id = s.sort_id';
+    $query.= ' GROUP BY m.product_id';
+    $query.= ' HAVING sort_name LIKE "%'.$sort.'%"';
+    $runSortQuery = $pdo->query($query);
+    if($runSortQuery){
+      $movies = $runSortQuery->fetchAll(PDO::FETCH_ASSOC);
+      return $movies;
+    }
+
+    else {
+        return 'No entries found';
+    }
+}
